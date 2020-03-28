@@ -26,8 +26,8 @@ print(hyp)
 y = tch.randint(5,(3,)).long()  # 예측값에 대한 정답 index random하게 생성
 print(y)
 
-y_one_hot = tch.zeros_like(hyp)  #hyp 와 크기가 같은  one hot tensor 제적
-y_one_hot.scatter_(1,y.unsqueeze(1),1)  # dim =1에 대해 y.unsqueeze
+y_one_hot = tch.zeros_like(hyp)  #hyp 와 크기가 같은  one hot tensor 제작
+y_one_hot.scatter_(1,y.unsqueeze(1),1)  # dim =1 에 대해 y.unsqueeze
 
 print(y_one_hot)
 
