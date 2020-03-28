@@ -35,8 +35,6 @@ for i in range(epochs):
     cost.backward()  #
     opt.step()   # w,b min 되도록 wb update
 
-
-
 #Model 평가
 
 hyp = tch.sigmoid(x_trn.matmul(w)+b)
