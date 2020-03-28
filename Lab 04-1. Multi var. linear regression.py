@@ -36,15 +36,13 @@ for i in range(1,epochs+1):
     '''
     
     cost = torch.mean((hyp-ytrn)**2)
-    
-    '''
-    cost function -> MSE 사용
-    
-    '''
-    
+      # cost function -> MSE 사용
     opt.zero_grad()  # gradient 초기화
     cost.backward()  # gradient 계산
     opt.step()  # 계산된 gradient 의 방향대로 w,b 업데이트
+    
+    
+    
     
     
 '''
@@ -52,7 +50,6 @@ for i in range(1,epochs+1):
 nn.Module과 torch.nn.functional을 이용한 코드 단순화
 
 '''
-
 
 class MultivariateLinearRegressionModel(nn.Module):
     def __init__(self):
